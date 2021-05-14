@@ -1,0 +1,52 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/chart-device-data.js" type="text/javascript" charset="utf-8"></script>
+    <link href="css/style.css" rel="stylesheet" />
+
+    <title>IoT Dashboard</title>
+</head>
+
+<body>
+    <h1 class="flexHeader">
+        <span>
+            <span id="deviceCount">0 devices</span>
+            <select id="listOfDevices" class="select_box"></select>
+        </span>
+        <span id="deviceLocation"></span>
+    </h1>
+    <div>
+        <canvas id="iotLights"  width="150" height="300" style="border:1px solid #000000;"></canvas>
+        <br/><br/>
+        <label>Mode: </label>
+        <select id="mode">
+            <option value="normal">Normal</option>
+            <option value="blink">Blink</option>
+        </select>
+        <br />
+        <label>Green Interval: </label>
+        <input type="text" id="green_interval" size="3" value="5"><span> seconds</span>
+        <br/>
+        <label>Yellow Interval: </label>
+        <input type="text" id="yellow_interval" size="3" value="3"><span> seconds</span>
+        <br/>
+        <label>Red Interval: </label>
+        <input type="text" id="red_interval" size="3" value="5"><span> seconds</span>
+        <br/>
+        <label>Location: </label>
+        <input type="text" id="location" size="30" value="Varginha - Centro 01">
+        <br/>
+        <button type="button" id="apply">Apply</button>
+        <br/><br/>
+        <canvas id="iotChart2"></canvas>
+        <canvas id="iotChart"></canvas>
+    </div>
+</body>
+
+</html>
